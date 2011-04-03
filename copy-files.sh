@@ -48,6 +48,7 @@ cp $STAGESYS/lib/libOmxH264Dec.so ../../../vendor/htc/$DEVICE/proprietary
 cp $STAGESYS/lib/libOmxMpeg4Dec.so ../../../vendor/htc/$DEVICE/proprietary
 cp $STAGESYS/lib/libcamera.so ../../../vendor/htc/$DEVICE/proprietary
 cp $STAGESYS/lib/libOmxVidEnc.so ../../../vendor/htc/$DEVICE/proprietary
+cp $STAGESYS/lib/libgps.so ../../../vendor/htc/$DEVICE/proprietary
 cp $STAGESYS/lib/libgsl.so ../../../vendor/htc/$DEVICE/proprietary
 cp $STAGESYS/lib/libhtc_acoustic.so ../../../vendor/htc/$DEVICE/proprietary
 cp $STAGESYS/lib/libaudioeq.so ../../../vendor/htc/$DEVICE/proprietary
@@ -75,6 +76,7 @@ chmod 755 ../../../vendor/htc/$DEVICE/proprietary/akmd
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES += \\
+    vendor/htc/__DEVICE__/proprietary/libgps.so:obj/lib/libgps.so \\
     vendor/htc/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so
  
 # All the blobs necessary for passion
@@ -95,6 +97,7 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libOmxMpeg4Dec.so:/system/lib/libOmxMpeg4Dec.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxVidEnc.so:/system/lib/libOmxVidEnc.so \\
     vendor/htc/__DEVICE__/proprietary/libcamera.so:/system/lib/libcamera.so \\
+    vendor/htc/__DEVICE__/proprietary/libgps.so:/system/lib/libgps.so \\
     vendor/htc/__DEVICE__/proprietary/libgsl.so:/system/lib/libgsl.so \\
     vendor/htc/__DEVICE__/proprietary/libhtc_acoustic.so:/system/lib/libhtc_acoustic.so \\
     vendor/htc/__DEVICE__/proprietary/libaudioeq.so:/system/lib/libaudioeq.so \\
