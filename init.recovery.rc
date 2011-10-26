@@ -7,6 +7,9 @@ on init
     export ANDROID_DATA /data
     export EXTERNAL_STORAGE /sdcard
 
+    export OFFMODE_VSZ_ON 436
+    export OFFMODE_VSZ_OFF 444
+
     symlink /system/etc /etc
 
     mkdir /boot
@@ -44,6 +47,10 @@ service power_test /sbin/power_test
 service offmode_charging /sbin/offmode_charging
 
 service detect_key /sbin/detect_key
+
+# args: [--button-backlight-on num] [--offmode-vsz-off num]
+service offmode_tasks /sbin/offmode_tasks.sh
+    oneshot
 
 service adbd /sbin/adbd recovery
 
